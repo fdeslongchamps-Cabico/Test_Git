@@ -1,0 +1,300 @@
+﻿<!-- =====================================================================
+                          ExportBOM_Planif.xml                             
+© 2019  Dunin Technologie Inc.                                        
+==========================================================================
+
+= DÉFINITION =============================================================
+Exportation d'un projet.
+==========================================================================
+
+= NOTES ==================================================================
+====================================================================== -->
+
+
+<xml>
+  <Objet id="commande" objet="prop~$pere.$documCour" > <!-- this.$sauveDxf = true; --> <!-- programme="pgm~ this.genDXF();" -->
+    <Texte valeur="prop~$code"       label="codeComm" />
+    <Texte valeur="prop~$client"     label="dealerCode" />
+    <Texte valeur="prop~$sousTotal"  label="sousTotal" />
+    <Texte valeur="prop~$pourcEsc"   label="pourcEsc" />
+    <Texte valeur="prop~$totalEsc"   label="totalEsc" />
+    <Texte valeur="prop~$sousTotal2" label="Total" />
+    <Texte valeur="pgm~"             label="DateVersionExport" >
+  var today = new Date();
+            var dd = today.getDate();
+            dd = ("0" + dd).slice(-2);
+            var mm = today.getMonth() + 1;
+            mm = ("0" + mm).slice(-2);
+            var yyyy = today.getFullYear(); 
+				result = " " + yyyy + "/" + mm + "/" + dd;
+  </Texte>
+    <Objet id="kits" objet="prop~$ingCour.$kits">
+      <Texte valeur="prop~$cle"               label="cle" />
+      <Texte valeur="pgm~result=this.$pere.$pere.$code"   label="pereCle" trad="false" />
+      <Texte valeur="prop~$no"                label="no" />
+      <Texte valeur='prop~ligne'              label="ligne" />
+      <Texte valeur='prop~cabDesign'          label="cabDesign" trad="false" />
+      <Texte valeur='prop~usage'              label="usage" trad="false" />     
+      <Texte valeur='prop~detailSection'      label="detailSection" />
+      <Texte valeur='prop~style'              label="style" trad="false" />
+      <Texte valeur='prop~hingeStyle'         label="hingeStyle" trad="false" />
+      <Texte valeur='prop~hingeColor'     label="hingeColor" trad="false"/>
+      <Texte valeur='prop~boxConst'           label="boxConst" trad="false" />
+      <Texte valeur='prop~specie'             label="specie" trad="false" />
+      <Texte valeur='prop~color'              label="color" trad="false" />
+      <Texte valeur='prop~colorMatchCode'     label="colorMatchCode" trad="false" />
+      <Texte valeur='prop~glaze'              label="glaze" trad="false" />
+      <Texte valeur='prop~sheen'              label="sheen" trad="false" />
+      <Texte valeur='prop~feMat'              label="feMat" trad="false" />
+      <Texte valeur='prop~wd_model'           label="wd_model" trad="false" />
+      <Texte valeur='prop~wd_centPan'         label="wd_centPan" trad="false" />
+      <Texte valeur='prop~wd_molding'         label="wd_molding" trad="false" />
+      <Texte valeur='prop~wd_edgeProfile'     label="wd_edgeProfile" trad="false" /> <!-- Test commentaire GIT-->
+      <Texte valeur='prop~bd_model'           label="bd_model" trad="false" /> <!--Hello World-->
+      <Texte valeur='prop~bd_centPan'         label="bd_centPan" trad="false" />
+      <Texte valeur='prop~bd_molding'         label="bd_molding" trad="false" />
+      <Texte valeur='prop~bd_edgeProfile'     label="bd_edgeProfile" trad="false" />
+      <Texte valeur='prop~dfmodel'            label="dfmodel" trad="false" />
+      <Texte valeur='prop~dfcentPan'          label="dfcentPan" trad="false" />
+      <Texte valeur='prop~dfmolding'          label="dfmolding" trad="false" />
+      <Texte valeur='prop~dfedgeProfile'      label="dfedgeProfile" trad="false" />
+      <Texte valeur='prop~ageing'             label="ageing" trad="false" />
+      <Texte valeur='prop~fingerGroove'       label="fingerGroove" trad="false" />
+      <Texte valeur='prop~cabTallHeightAlign' label="cabTallHeightAlign" trad="false" />
+      <Texte valeur='prop~glideModel'         label="glideModel" trad="false" />
+      <Objet id="items" objet="prop~$items" programme='pgm~CBOMEdit.chargeListeCompo(this, this, true, this)'>
+        <Texte valeur="prop~$cle"          label="cle" />
+        <Texte valeur="pgm~result=this.$pere.$pere.$pere.$code + '-' + this.$pere.$cle"   label="pereCle" trad="false" />
+        <Texte valeur="prop~$no"           label="no" />
+        <Texte valeur="prop~fpref"         label="FPRef" />
+        <Texte valeur="prop~$qte"          label="qte" />
+        <Texte valeur="prop~$code"         label="code" trad="false" />
+        <Texte valeur="prop~$nom"          label="nom" trad="false" />
+        <Texte valeur="prop~$t_larg"       label="largeur" />
+        <Texte valeur="prop~$t_larg2"      label="largeur2" />
+        <Texte valeur="prop~$t_haut"       label="hauteur" />
+        <Texte valeur="prop~$t_prof"       label="profondeur" />
+        <Texte valeur="prop~$t_prof2"      label="profondeur2" />
+        <Texte valeur="prop~profil"        label="profil" />   <!--Ajouter par Francis Deslongchamps-->
+        <Texte valeur="prop~profilG"        label="profilG" /> <!--Ajouter par Francis Deslongchamps-->
+        <Texte valeur="prop~profilD"        label="profilD" /> <!--Ajouter par Francis Deslongchamps-->
+        <Texte valeur="prop~profilT"        label="profilT" /> <!--Ajouter par Francis Deslongchamps-->
+        <Texte valeur="prop~profilB"        label="profilB" /> <!--Ajouter par Francis Deslongchamps-->
+        <Texte valeur="prop~porteNb"       label="porteNb" /> 
+        <Texte valeur="prop~penturage"     label="penturage" trad="false" />
+        <Texte valeur="prop~cotesFin"       label="FinEnds" />
+        <Texte valeur="prop~$sousTotalAff" label="sousTotalAff" />
+<!--         <Texte valeur="prop~$totalPromo"   label="totalPromo" />
+        <Texte valeur="prop~$totalPromo2"  label="totalPromo2" /> -->
+        <Texte valeur="prop~$gTot"         label="gTot" />
+        <Texte valeur="prop~$sousTotalModif" label="sousTotalModif" />
+        <Texte valeur="prop~$sousTotalOrig" label="sousTotalOrig" />
+        <Texte valeur="prop~nbDrawBoxCumul" label="nbBox" />
+        <Texte valeur="prop~nbFrame"        label="nbFrame" /> <!-- Compléter -->
+        <Texte valeur="prop~nbDoorUCumul"     label="nbDoorU" />
+        <Texte valeur="prop~nbDoorBCumul"     label="nbDoorB" />
+        <Texte valeur="prop~nbFrontCumul"     label="nbFront" />
+        <Texte valeur="prop~nbHingeCumul"     label="nbHinge" />
+        <Texte valeur="prop~sommNom"       label="descrip" trad="false" />
+        <Texte valeur="prop~sommDims"      label="descrip2" trad="false" />
+        <Texte valeur="prop~descripOption" label="descripOption" trad="false" />
+        <Texte valeur="prop~descripOption2" label="descripOption2" trad="false" />
+        <Texte valeur="prop~voirPlan"      label="voirPlan" trad="false" />
+        <Texte valeur="prop~gItem"         label="gItem" trad="false" />
+        <Texte valeur="prop~achatExterne"  label="achatExterne" trad="false" />
+          <Objet id="gabaritsData" objet="prop~$gabaritsData">
+              <Texte valeur="prop~$gabaritCode"     label="gabaritCode" />
+              <Texte valeur="prop~$gabaritIdent"     label="gabaritIdent" />
+              <Texte valeur="prop~gabaritProg"     label="gabaritProg" />
+              <Texte valeur="prop~gabarit1"        label="gabarit1" />
+              <Texte valeur="prop~gabarit2"        label="gabarit2" />
+              <Texte valeur="prop~gabarit3"        label="gabarit3" />
+              <Texte valeur="prop~gabaritDim1"     label="gabaritDim1" />
+              <Texte valeur="prop~gabaritDim2"     label="gabaritDim2" />
+              <Texte valeur="prop~gabaritDim3"     label="gabaritDim3" />
+              <Texte valeur="prop~gabaritSelect1"     label="gabaritSelect1" />
+              <Texte valeur="prop~gabaritSelect2"     label="gabaritSelect2" />
+              <Texte valeur="prop~gabaritSelect3"     label="gabaritSelect3" />     
+              <Texte valeur="prop~gabaritSelectDim1"     label="gabaritSelectDim1" />
+              <Texte valeur="prop~gabaritSelectDim2"     label="gabaritSelectDim2" />
+              <Texte valeur="prop~gabaritSelectDim3"     label="gabaritSelectDim3" />                
+          </Objet> 
+          <Objet id="Assemble" objet="prop~$bomEveLstObj">
+            <Texte valeur="prop~$assCode"         label="$assCode" trad="false" />
+            <Texte valeur="prop~$code"            label="$code" trad="false" />
+            <Texte valeur="pgm~result=this.$pere.itemComm().$pere.$pere.$pere.$code + '-' + this.$pere.itemComm().$pere.$cle + '-' + this.$pere.itemComm().$cle"   label="pereCle" trad="false" />
+            <Texte valeur="prop~$3Dobj1.codeModel"       label="codeModel" trad="false" />
+            <Texte valeur="prop~$3Dobj1.codeModelPorte"  label="codeModelPorte" trad="false" />
+            <Texte valeur="pgm~result=CBom.estPorte(this)"  label="estPorte" trad="false" />
+            <Texte valeur="pgm~result=CBom.valideAssAchete(this)"  label="achatExterne" trad="false" />
+            <Texte valeur="prop~$no"                 label="$no" trad="false" /> 
+            <Texte valeur="1"                        label="$qte" trad="false" />
+            <Texte valeur="prop~gItem"               label="gItem" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$t_$larg"     label="largObj" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$t_$haut"    label="hautObj" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$t_$prof"    label="profObj" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$tiroirType" label="$tiroirTypeOrig" trad="false" />
+            <Texte valeur="pgm~var type; if((this.isTiroir) &amp;&amp; (type =this.$3Dobj1.$tiroirType) &amp;&amp; (type.startsWith('Tandem') || type.startsWith('Legra'))){result='Metal'} else if(this.isTiroir) result='Bois'" label="$tiroirType" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$t_$tiroirLarg"             label="$tiroirLarg" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$t_$tiroirHaut"             label="$tiroirHaut" trad="false" />
+            <Texte valeur="prop~$3Dobj1.$t_$tiroirProf"             label="$tiroirProf" trad="false" />
+            <Objet id="compos" objet="prop~$bomEveLst">
+              <Texte valeur="pgm~result=this.$orig.codeUniqueExport()"  label="$cle" trad="false" />
+              <Texte valeur="pgm~result=this.$pere.$pere.itemComm().$pere.$pere.$pere.$code + '-' + this.$pere.$pere.itemComm().$pere.$cle + '-' + this.$pere.$pere.itemComm().$cle + '-' + this.$orig.$pere.$clas.$code + this.$orig.$pere.$no"   label="pereCle" trad="false" />
+              <Texte valeur="prop~$orig.$code"            label="$code" trad="false" />
+              <Texte valeur="prop~$orig.$nom"             label="$nom" trad="false" />
+              <Texte valeur="pgm~result=this.$orig.hexadecimalID(this.$pere.$pere.itemComm())" label="HexadecimalID" trad="false" />
+              <Texte valeur="pgm~if (this.$orig.$qte) result=this.$orig.$qte; else result=1"  label="qte" />
+              <Texte valeur="prop~$orig.$mpCode"          label="mpCode" />
+              <Texte valeur="pgm~if (!CBom.valideAssAchete(this.$pere))  result=this.$orig.$edgeDescrip"     label="$edgeDescrip" trad="false" />
+              <Texte valeur="prop~$orig.$t_$long"         label="haut" />
+              <Texte valeur="prop~$orig.$t_$larg"         label="larg" />
+              <Texte valeur="prop~$orig.$t_$epais"        label="epais" />
+              <Texte valeur="prop~$orig.$surfP2"          label="$surfP2" />
+              <Texte valeur="pgm~result= this.$orig.surface(this.$orig.$longBrut, this.$orig.$largBrut, PIED)"          label="$surfBrutP2" />
+              <Texte valeur="prop~$orig.$t_$longBrut"     label="$t_$longBrut" />
+              <Texte valeur="prop~$orig.$t_$largBrut"     label="$t_$largBrut" />
+              <Texte valeur="prop~$orig.$t_$epaisBrut"    label="$t_$epaisBrut" />
+              <Texte valeur="prop~$orig.$t_$edge1Long"     label="$edge1Long" />
+              <Texte valeur="pgm~if (!CBom.valideAssAchete(this.$pere))  result=this.$orig.$edge1MP"   label="$edge1MP" trad="false" />
+              <Texte valeur="prop~$orig.$t_$edge2Long"     label="$edge2Long" />
+              <Texte valeur="pgm~if (!CBom.valideAssAchete(this.$pere))  result=this.$orig.$edge2MP"          label="$edge2MP" trad="false" /> 
+              <Texte valeur="pgm~if(this.$orig.estRequisNesting()){result=((((this.$larg + this.$long)/25.4) *2 ) / 12)} else result=0"   label="nested" /> <!-- Compléter -->
+              <Texte valeur="pgm~result=this.$orig.estRequisNesting()"     label="nesting" />
+              <Texte valeur="pgm~result=this.surfFinish()"            label="Finished" /> <!-- Compléter -->
+              <Texte valeur="pgm~result=this.surfnoFinish()"          label="notFinished" /> <!-- Compléter -->
+              <Texte valeur="pgm~if ((this.$orig.$finition &amp;&amp; this.$orig.$finition.$couleur) || (this.$orig.$finitionImpl &amp;&amp; this.$orig.$finitionImpl.$couleur) || (this.$orig.$finitionImplPrev &amp;&amp; this.$orig.$finitionImplPrev.$couleur)) result=true"          label="finitionImpl" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionAv &amp;&amp; this.$orig.$finitionAv.$couleur) result=true"          label="finitionAv" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionAr &amp;&amp; this.$orig.$finitionAr.$couleur) result=true"          label="finitionAr" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionG &amp;&amp; this.$orig.$finitionG.$couleur) result=true"          label="finitionG" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionD &amp;&amp; this.$orig.$finitionD.$couleur) result=true"          label="finitionD" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionH &amp;&amp; this.$orig.$finitionH.$couleur) result=true"          label="finitionH" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionB &amp;&amp; this.$orig.$finitionB.$couleur) result=true"          label="finitionH" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionAr &amp;&amp; this.$orig.$finitionAr.$couleur) result=this.codeCouleur(this.$orig.$finitionAr.$couleur)"        label="pgm~result=this.$orig.codeUniqueExport()" /> 
+              <Texte valeur="pgm~if (this.$orig.$finitionAv &amp;&amp; this.$orig.$finitionAv.$couleur) result=this.codeCouleur(this.$orig.$finitionAv.$couleur)"        label="pgm~result=this.$orig.codeUniqueExport() + '_dos'" /> 
+              <Texte valeur="pgm~"          label="cote1et2Fini" >
+              if (this.$orig.$finition &amp;&amp; this.$orig.$finition.$couleur)
+              result=this.codeCouleur(this.$orig.$finition.$couleur);
+              else if (this.$orig.$finitionImpl &amp;&amp; this.$orig.$finitionImpl.$couleur)
+              result=this.codeCouleur(this.$orig.$finitionImpl.$couleur);
+              else if (this.$orig.$finitionImplPrev &amp;&amp; this.$orig.$finitionImplPrev.$couleur)
+               result=this.codeCouleur(this.$orig.$finitionImplPrev.$couleur);
+              </Texte>
+              <Texte valeur="pgm~result=this.$orig.codeUniqueExport() + '.dxf'"        label="EtiquetteCote" /> 
+              <Objet id='posEtiquette' objet='pgm~'>
+                if (this.$orig.$dxf &amp;&amp; this.$orig.posEtiquette)
+                  result = this.$orig.posEtiquette
+                <Texte valeur="prop~angle"          label="angle" />
+                <Texte valeur="prop~x"          label="x" />
+                <Texte valeur="prop~y"          label="y" />
+                <Objet id='points' objet='prop~points'>
+                  <Texte valeur="prop~x"          label="x" />
+                  <Texte valeur="prop~y"          label="y" />
+                </Objet>
+              </Objet>
+              <Texte valeur="prop~$orig.$nbCote"          label="nbCote" /> <!-- Compléter -->
+              <Texte valeur="prop~$orig.$edgeEmpl"        label="emplEdge" /> <!-- Compléter -->
+              <Texte valeur="prop~$orig.$custom"          label="bomEdit" /> 
+              <Texte valeur="pgm~result=this.$orig.estRequisNesting()"     label="nesting" />
+              <Texte valeur="prop~$orig.$finiBomCust"     label="$finiBomCust" />
+              <Texte valeur="prop~$orig.$finiEdgeBomCust" label="$finiEdgeBomCust" />
+              <Texte valeur="prop~$orig.$sousPrep"        label="$sousPrep" />
+              <Texte valeur="prop~$orig.$routingExt"      label="$routingExt" /> <!-- Compléter -->
+              <Texte valeur="prop~$orig.$routeNumber"     label="routeNumber" /> <!-- Compléter -->
+              <Texte valeur="prop~$orig.$routeName"       label="routeName" /> <!-- Compléter -->
+              <Texte valeur="pgm~result=String(this.$orig.sensInv())"     label="sensGrainInv" />
+              <Texte valeur="pgm~"       label="grainBois" >
+                if (this.$orig.$grainBois == "0")
+                  result = "0"
+                else if (this.$orig.$grainBois == "90")
+                  result = "90"
+                else if (this.$orig.$grainBois == 'na')
+                  result = "NA"
+              </Texte>
+              <Objet id='lstCotes' objet='pgm~'>
+                if (this.$orig.$dxf &amp;&amp; this.$orig.$dxf.trouveGoujonsCotes)
+                  this.$orig.$dxf.trouveGoujonsCotes(this.$orig)
+                if (this.$orig.$dxf)
+                  result = this.$orig.$dxf.lstCotes
+                <Texte valeur="prop~id"          label="id" />
+                <Texte valeur="pgm~if (this.x1 == 0) result = '0.0'; else result = this.x1"          label="x1" />
+                <Texte valeur="pgm~if (this.y1 == 0) result = '0.0'; else result = this.y1"          label="y1" />
+                <Texte valeur="pgm~if (this.x2 == 0) result = '0.0'; else result = this.x2"          label="x2" />
+                <Texte valeur="pgm~if (this.y2 == 0) result = '0.0'; else result = this.y2"          label="y2" />
+                <Texte valeur="prop~mpEdge"      label="mpEdge" />
+                <!--Texte valeur="prop~idPts"       label="idPts" /-->
+                <Texte valeur="prop~estDevant"   label="estDevant" />
+                <Texte valeur="pgm~"      label="coupeAngle" >
+                  if (this.biseau)
+                    result='1'
+                  else
+                    result = '0'
+                </Texte>
+                <Objet id='goujons' objet='prop~goujons'>
+                  <Texte valeur="prop~sensGoujon"          label="sens" />
+                  <Objet id='cercles' objet='prop~cercles'>
+                    <Texte valeur="prop~rayon"          label="rayon" />
+                    <Texte valeur="prop~prof"          label="prof" />
+                    <Texte valeur="prop~posEpais"          label="posEpais" />
+                    <Texte valeur="prop~position"          label="position" />
+                  </Objet>
+                </Objet>
+              </Objet>
+              <Objet id='lstCotesHoraire' objet='pgm~'>
+                if (this.$orig.$dxf &amp;&amp; this.$orig.$dxf.trouveGoujonsCotes)
+                  this.$orig.$dxf.trouveGoujonsCotes(this.$orig)
+                if (this.$orig.$dxf)
+                  result = this.$orig.$dxf.lstCotesHoraire
+                <Texte valeur="prop~id"          label="id" />
+                <Texte valeur="pgm~if (this.x1 == 0) result = '0.0'; else result = this.x1"          label="x1" />
+                <Texte valeur="pgm~if (this.y1 == 0) result = '0.0'; else result = this.y1"          label="y1" />
+                <Texte valeur="pgm~if (this.x2 == 0) result = '0.0'; else result = this.x2"          label="x2" />
+                <Texte valeur="pgm~if (this.y2 == 0) result = '0.0'; else result = this.y2"          label="y2" />
+                <Texte valeur="prop~mpEdge"      label="mpEdge" />
+                <!--Texte valeur="prop~idPts"       label="idPts" /-->
+                <Texte valeur="prop~estDevant"   label="estDevant" />
+                <Texte valeur="pgm~"      label="coupeAngle" >
+                  if (this.biseau)
+                    result='1'
+                  else
+                    result = '0'
+                </Texte>
+                <Objet id='goujons' objet='prop~goujons'>
+                  <Texte valeur="prop~sensGoujon"          label="sens" />
+                  <Objet id='cercles' objet='prop~cercles'>
+                    <Texte valeur="prop~rayon"          label="rayon" />
+                    <Texte valeur="prop~prof"          label="prof" />
+                    <Texte valeur="prop~posEpais"          label="posEpais" />
+                    <Texte valeur="prop~position"          label="position" />
+                  </Objet>
+                </Objet>
+              </Objet>
+              <Texte valeur="pgm~" label='estCustom'>
+                var lstCotes
+                var estBiseau = false
+                var estLamello = false
+                var a2DXF = false
+
+                if (lstCotes = this.$orig.$dxf.lstCotes) {
+                  lstCotes.forEach(function(c) {estBiseau = estBiseau || c.biseau})
+                }
+
+                if (this.$pere &amp;&amp; this.$pere.$source &amp;&amp; this.$pere.$source.hauteurJointPan)
+                  estLamello = true
+
+                if (this.separeDXF &amp;&amp; this.possedeUsin2Faces)
+                  a2DXF = true
+
+                if (estBiseau || estLamello || a2DXF)
+                  result = "1"
+                else
+                  result = "0"
+              </Texte>
+              <Texte valeur="pgm~result=CBom.ordreEdge(this)" label='OrdreEdge'/>
+              <Texte valeur="pgm~result=CBom.ordreEdgeStd(this)" label='OrdreEdgeStd'/>
+            </Objet>
+          </Objet>  
+      </Objet> 
+    </Objet>
+  </Objet>
+</xml>

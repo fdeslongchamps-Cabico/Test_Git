@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Created>2006-09-12T15:06:44Z</Created>
+  <LastSaved>2021-07-19T17:04:07Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <RemovePersonalInformation/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11265</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <RefModeR1C1/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:Rotate="90"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Borders/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s73">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Rotate="90"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s75">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s76">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Feuil1">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="8" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s62" ss:DefaultColumnWidth="60"
+   ss:DefaultRowHeight="15">
+   <Column ss:StyleID="s62" ss:Width="57"/>
+   <Column ss:StyleID="s62" ss:Width="26.25" ss:Span="1"/>
+   <Column ss:Index="4" ss:StyleID="s62" ss:Width="52.5"/>
+   <Column ss:StyleID="s63" ss:Width="19.5"/>
+   <Column ss:StyleID="s75" ss:Width="218.25"/>
+   <Column ss:StyleID="s75" ss:Width="107.25"/>
+   <Column ss:StyleID="s63" ss:Width="19.5" ss:Span="1"/>
+   <Row ss:AutoFitHeight="0" ss:Height="42.75">
+    <Cell ss:Index="4" ss:StyleID="s64"><Data ss:Type="String">Définition</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">%/C</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Français</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">English</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">NoteFr</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">NoteEn</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s64"><Data ss:Type="String">Rien</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s64"><Data ss:Type="String">Rien</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s74"/>
+    <Cell ss:StyleID="s65"/>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">ageing</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Rien</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Rien</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ageing_NA</Data></Cell>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:Index="5" ss:StyleID="s73"><Data ss:Type="String">0</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Sans Vieillissement</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">No Ageing</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ageing_DT</Data></Cell>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:Index="5" ss:StyleID="s73"><Data ss:Type="String">10</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Vielli (Coin usé, fissures et trous au couteau)</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Distress</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ageing_WC</Data></Cell>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:Index="5" ss:StyleID="s73"><Data ss:Type="String">10</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Coin usé</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Worn Corner</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="String">ageing_KD</Data></Cell>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:StyleID="s68"/>
+    <Cell ss:Index="5" ss:StyleID="s73"><Data ss:Type="String">10</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Fissures et trous au couteau</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Knife Splits and Dents</Data></Cell>
+    <Cell ss:StyleID="s73"/>
+    <Cell ss:StyleID="s73"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.25" x:Right="0.25" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <FitToPage/>
+   <Print>
+    <FitHeight>0</FitHeight>
+    <ValidPrinterInfo/>
+    <Scale>57</Scale>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveCol>5</ActiveCol>
+     <RangeSelection>R1C6:R1C7</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
