@@ -50,7 +50,7 @@ Exportation d'un projet.
       <Texte valeur='prop~wd_centPan'         label="wd_centPan" trad="false" />
       <Texte valeur='prop~wd_molding'         label="wd_molding" trad="false" />
       <Texte valeur='prop~wd_edgeProfile'     label="wd_edgeProfile" trad="false" /> <!-- Test commentaire GIT-->
-      <Texte valeur='prop~bd_model'           label="bd_model" trad="false" /> <!--Hello World-->
+      <Texte valeur='prop~bd_model'           label="bd_model" trad="false" /> <!--Hello World Hello Hello-->
       <Texte valeur='prop~bd_centPan'         label="bd_centPan" trad="false" />
       <Texte valeur='prop~bd_molding'         label="bd_molding" trad="false" />
       <Texte valeur='prop~bd_edgeProfile'     label="bd_edgeProfile" trad="false" />
